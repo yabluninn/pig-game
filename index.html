@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <button class="new-game-btn">
+          <img
+            src="https://em-content.zobj.net/thumbs/240/apple/325/pig-face_1f437.png"
+            alt="PigFace"
+          />
+          <p>New game</p>
+        </button>
+        <button class="roll-dice-btn">
+          <img
+            src="https://em-content.zobj.net/thumbs/240/apple/325/game-die_1f3b2.png"
+            alt="GameDice"
+          />
+          <p>Roll dice</p>
+        </button>
+        <button class="left-score-btn">
+          <img
+            src="https://em-content.zobj.net/thumbs/240/apple/325/ok-hand_1f44c.png"
+            alt="GameDice"
+          />
+          <p>Left score</p>
+        </button>
+        <img src="public/images/dice3.png" alt="" class="dice-img" />
+        <div class="player current pl-one">
+          <div class="info-block">
+            <p class="player-name">Player 1</p>
+            <p class="total-score pl-one-ts">0</p>
+          </div>
+          <div class="current-score-block">
+            <p class="current-score-header">Current score:</p>
+            <p class="current-score pl-one-cs">0</p>
+          </div>
+        </div>
+        <div class="player pl-two">
+          <div class="info-block">
+            <p class="player-name">Player 2</p>
+            <p class="total-score pl-two-ts">0</p>
+          </div>
+          <div class="current-score-block">
+            <p class="current-score-header">Current score:</p>
+            <p class="current-score pl-two-cs">0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="src/js/main.js"></script>
+  </body>
+</html>
