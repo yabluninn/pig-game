@@ -1,4 +1,4 @@
-import "../scss/style.scss";
+// import "../scss/style.scss";
 ("use strict");
 
 let totalScores = [0, 0];
@@ -13,6 +13,12 @@ const totalScroreTwo = document.querySelector(".pl-two-ts");
 const currentScoreOne = document.querySelector(".pl-one-cs");
 const currentScoreTwo = document.querySelector(".pl-two-cs");
 const diceImage = document.querySelector(".dice-img");
+const playerNameOne = document.querySelector(".pl-one-name");
+const playerNameTwo = document.querySelector(".pl-two-name");
+
+const menu = document.querySelector(".menu");
+
+menu.style.display = "flex";
 
 function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -36,6 +42,8 @@ const startNewGame = () => {
   currentScores[1] = 0;
   playerOne.classList.add("current");
   playerTwo.classList.remove("current");
+  totalScoreOne.textContent = totalScores[0];
+  totalScroreTwo.textContent = totalScores[1];
   currentScoreOne.textContent = currentScores[0];
   currentScoreTwo.textContent = currentScores[1];
   const rollButton = document.querySelector(".roll-dice-btn");
@@ -43,7 +51,9 @@ const startNewGame = () => {
 };
 
 const newGameButton = document.querySelector(".new-game-btn");
-newGameButton.addEventListener("click", startNewGame);
+newGameButton.addEventListener("click", function () {
+  menu.style.display = "flex";
+});
 
 const switchCurrentPlayer = () => {
   if (currentPlayerId === 0) {
@@ -81,6 +91,48 @@ const leftScore = () => {
 
 const leftScoreButton = document.querySelector(".left-score-btn");
 leftScoreButton.addEventListener("click", leftScore);
+
+const setDefaultCheckboxOne = document.querySelector(
+  ".set-default-name-pl-one"
+);
+const setDefaultCheckboxTwo = document.querySelector(
+  ".set-default-name-pl-two"
+);
+const playerNameOneInput = document.querySelector(".player-one-input");
+const playerNameTwoInput = document.querySelector(".player-two-input");
+
+setDefaultCheckboxOne.addEventListener("change", function () {
+  if (this.checked) {
+    playerNameOneInput.value = "Player 1";
+    playerNameOneInput.disabled = true;
+  } else {
+    playerNameOneInput.value = "";
+    playerNameOneInput.disabled = false;
+  }
+});
+
+setDefaultCheckboxTwo.addEventListener("change", function () {
+  if (this.checked) {
+    playerNameTwoInput.value = "Player 2";
+    playerNameTwoInput.disabled = true;
+  } else {
+    playerNameTwoInput.value = "";
+    playerNameTwoInput.disabled = false;
+  }
+});
+
+const playButton = document.querySelector(".play-btn");
+playButton.addEventListener("click", function (event) {
+  if ((playerNameOneInput.value != "") & (playerNameTwoInput.value != "")) {
+    playerNameOne.textContent = playerNameOneInput.value;
+    playerNameTwo.textContent = playerNameTwoInput.value;
+    menu.style.display = "none";
+    startNewGame();
+    event.preventDefault();
+  } else {
+    event.preventDefault();
+  }
+});
 
 diceImage.ondragstart = () => {
   return false;

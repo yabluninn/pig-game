@@ -2,9 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/" />
+    <link rel="icon" type="image/svg+xml" href="public/favicon/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pig Game</title>
+    <link rel="stylesheet" href="src/scss/style.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
   </head>
   <body>
     <div id="app">
@@ -33,7 +38,7 @@
         <img src="public/images/dice3.png" alt="" class="dice-img" />
         <div class="player current pl-one">
           <div class="info-block">
-            <p class="player-name">Player 1</p>
+            <p class="player-name pl-one-name">Player 1</p>
             <p class="total-score pl-one-ts">0</p>
           </div>
           <div class="current-score-block">
@@ -43,7 +48,7 @@
         </div>
         <div class="player pl-two">
           <div class="info-block">
-            <p class="player-name">Player 2</p>
+            <p class="player-name pl-two-name">Player 2</p>
             <p class="total-score pl-two-ts">0</p>
           </div>
           <div class="current-score-block">
@@ -51,6 +56,82 @@
             <p class="current-score pl-two-cs">0</p>
           </div>
         </div>
+      </div>
+      <div class="menu">
+        <form class="menu-bg">
+          <p class="menu-header">
+            <img
+              src="https://em-content.zobj.net/thumbs/240/apple/325/people-holding-hands_1f9d1-200d-1f91d-200d-1f9d1.png"
+              alt=""
+            />
+            Create players
+          </p>
+          <div class="input-container">
+            <div class="input-block">
+              <p class="input-label">Player 1:</p>
+              <input
+                type="text"
+                class="player-one-input"
+                placeholder="Enter name"
+              />
+              <div class="set-default-name-block">
+                <div class="checkbox-wrapper-30">
+                  <span class="checkbox">
+                    <input type="checkbox" class="set-default-name-pl-one" />
+                    <svg>
+                      <use xlink:href="#checkbox-30" class="checkbox"></use>
+                    </svg>
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+                    <symbol id="checkbox-30" viewBox="0 0 22 22">
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        d="M5.5,11.3L9,14.8L20.2,3.3l0,0c-0.5-1-1.5-1.8-2.7-1.8h-13c-1.7,0-3,1.3-3,3v13c0,1.7,1.3,3,3,3h13 c1.7,0,3-1.3,3-3v-13c0-0.4-0.1-0.8-0.3-1.2"
+                      />
+                    </symbol>
+                  </svg>
+                </div>
+                <p class="input-sublabel">Default player name</p>
+              </div>
+            </div>
+            <div class="input-block">
+              <p class="input-label">Player 2:</p>
+              <input
+                type="text"
+                class="player-two-input"
+                placeholder="Enter name"
+              />
+              <div class="set-default-name-block">
+                <div class="checkbox-wrapper-30">
+                  <span class="checkbox">
+                    <input type="checkbox" class="set-default-name-pl-two" />
+                    <svg>
+                      <use xlink:href="#checkbox-30" class="checkbox"></use>
+                    </svg>
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+                    <symbol id="checkbox-30" viewBox="0 0 22 22">
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        d="M5.5,11.3L9,14.8L20.2,3.3l0,0c-0.5-1-1.5-1.8-2.7-1.8h-13c-1.7,0-3,1.3-3,3v13c0,1.7,1.3,3,3,3h13 c1.7,0,3-1.3,3-3v-13c0-0.4-0.1-0.8-0.3-1.2"
+                      />
+                    </symbol>
+                  </svg>
+                </div>
+                <p class="input-sublabel">Default player name</p>
+              </div>
+            </div>
+          </div>
+          <button class="play-btn">
+            <img
+              src="https://em-content.zobj.net/thumbs/240/apple/325/video-game_1f3ae.png"
+              alt="PigFace"
+            />
+            <p>Play</p>
+          </button>
+        </form>
       </div>
     </div>
     <script type="module" src="src/js/main.js"></script>

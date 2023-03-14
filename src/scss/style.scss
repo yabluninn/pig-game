@@ -154,10 +154,254 @@ button p {
   height: 130px;
 }
 
+.menu {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.375);
+}
+
+.menu-bg {
+  width: 40%;
+  height: 90%;
+  background: rgb(255, 191, 87);
+  background: linear-gradient(
+    43deg,
+    rgba(255, 191, 87, 1) 0%,
+    rgba(241, 76, 0, 1) 83%
+  );
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.7px);
+  -webkit-backdrop-filter: blur(7.7px);
+  border: 1px solid rgba(255, 255, 255, 0.203);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  animation: modalWindowOpen 1s;
+}
+
+.menu-header {
+  width: 50%;
+  background: rgba(255, 255, 255, 0.744);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.7px);
+  -webkit-backdrop-filter: blur(7.7px);
+  border: 1px solid rgba(255, 255, 255, 0.492);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.menu-header img {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+.input-container {
+  width: 100%;
+  height: 62%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.input-block {
+  align-self: center;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.604);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.7px);
+  -webkit-backdrop-filter: blur(7.7px);
+  border: 1px solid rgba(255, 255, 255, 0.203);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding: 30px;
+}
+
+.input-label {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 5px;
+  color: black;
+}
+
+.input-block input[type="text"] {
+  font-size: 25px;
+  align-self: center;
+  width: 95%;
+  height: 50px;
+  margin: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.203);
+  background: rgba(255, 255, 255, 0.625);
+  box-shadow: 0 0px 35px rgba(0, 0, 0, 0.282);
+  padding-left: 15px;
+}
+
+.input-block input[type="text"]::placeholder {
+  font-size: 20px;
+  color: black;
+}
+
+.input-block input[type="text"]:focus {
+  outline: none;
+}
+
+.input-block input[type="text"]:disabled {
+  background: rgba(255, 255, 255, 0.415);
+  border: 1px solid rgba(255, 255, 255, 0.203);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: rgb(141, 141, 141);
+}
+
+.set-default-name-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.input-sublabel {
+  margin: 0;
+  font-size: 20px;
+  margin-left: 10px;
+  color: black;
+}
+
+.checkbox-wrapper-30 .checkbox {
+  --bg: #fff;
+  --brdr: #d1d6ee;
+  --brdr-actv: #1e2235;
+  --brdr-hovr: #bbc1e1;
+  --dur: calc((var(--size, 2) / 2) * 0.6s);
+  display: inline-block;
+  width: calc(var(--size, 1) * 22px);
+  position: relative;
+}
+.checkbox-wrapper-30 .checkbox:after {
+  content: "";
+  width: 100%;
+  padding-top: 100%;
+  display: block;
+}
+.checkbox-wrapper-30 .checkbox > * {
+  position: absolute;
+}
+.checkbox-wrapper-30 .checkbox input {
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  background-color: var(--bg);
+  border-radius: calc(var(--size, 1) * 4px);
+  border: calc(var(--newBrdr, var(--size, 1)) * 1px) solid;
+  color: var(--newBrdrClr, var(--brdr));
+  outline: none;
+  margin: 0;
+  padding: 0;
+  transition: all calc(var(--dur) / 3) linear;
+}
+.checkbox-wrapper-30 .checkbox input:hover,
+.checkbox-wrapper-30 .checkbox input:checked {
+  --newBrdr: calc(var(--size, 1) * 2);
+}
+.checkbox-wrapper-30 .checkbox input:hover {
+  --newBrdrClr: var(--brdr-hovr);
+}
+.checkbox-wrapper-30 .checkbox input:checked {
+  --newBrdrClr: var(--brdr-actv);
+  transition-delay: calc(var(--dur) / 1.3);
+}
+.checkbox-wrapper-30 .checkbox input:checked + svg {
+  --dashArray: 16 93;
+  --dashOffset: 109;
+}
+.checkbox-wrapper-30 .checkbox svg {
+  fill: none;
+  left: 0;
+  pointer-events: none;
+  stroke: var(--stroke, var(--border-active));
+  stroke-dasharray: var(--dashArray, 93);
+  stroke-dashoffset: var(--dashOffset, 94);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  top: 0;
+  transition: stroke-dasharray var(--dur), stroke-dashoffset var(--dur);
+}
+.checkbox-wrapper-30 .checkbox svg,
+.checkbox-wrapper-30 .checkbox input {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.play-btn {
+  bottom: 5%;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.play-btn p {
+  font-size: 25px;
+  margin-left: 15px;
+}
+
+.close-menu-btn {
+  width: 40px;
+  height: 40px;
+  top: 5%;
+  left: 92%;
+  background-color: white;
+}
+.close-menu-btn i {
+  font-size: 25px;
+  margin: 0 auto;
+}
+
 .current {
   background: rgba(255, 255, 255, 0.271);
-  // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  // backdrop-filter: blur(7.7px);
-  // -webkit-backdrop-filter: blur(7.7px);
-  // border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+@keyframes modalWindowOpen {
+  0% {
+    transform: scale(0.75);
+    overflow: hidden;
+  }
+  50% {
+    transform: scale(1.1);
+    overflow: hidden;
+  }
+  100% {
+    transform: scale(1);
+    overflow: hidden;
+  }
 }
