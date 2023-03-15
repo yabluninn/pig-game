@@ -12,3 +12,4 @@
   Now users can set their own nicknames to display it on the main game page;
 - Added animations to modal menu window and checkboxes;
 - Added "style.css" CSS file to correctly work of the project;
+- Added links for all dice images;
