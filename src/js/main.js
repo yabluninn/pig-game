@@ -1,4 +1,4 @@
-// import "../scss/style.scss";
+import "../scss/style.scss";
 ("use strict");
 
 let totalScores = [0, 0];
