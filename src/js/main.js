@@ -69,26 +69,7 @@ const switchCurrentPlayer = () => {
 
 const rollDice = () => {
   let rand = randomInt(1, 6);
-  switch (rand) {
-    case 1:
-      diceImage.src = "https://files.fm/thumb_show.php?i=xannc4s3c";
-      break;
-    case 2:
-      diceImage.src = "https://files.fm/thumb_show.php?i=rfcn4zxxr";
-      break;
-    case 3:
-      diceImage.src = "https://files.fm/thumb_show.php?i=gpqw3f5md";
-      break;
-    case 4:
-      diceImage.src = "https://files.fm/thumb_show.php?i=zaq57dq7b";
-      break;
-    case 5:
-      diceImage.src = "https://files.fm/thumb_show.php?i=ezbkws2k2";
-      break;
-    case 6:
-      diceImage.src = "https://files.fm/thumb_show.php?i=e57cwey7t";
-      break;
-  }
+  diceImage.src = `public/images/dice${rand}.png`;
   if (rand != 1) {
     currentScores[currentPlayerId] += rand;
     updateScoreText();
